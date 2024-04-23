@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.board {
+  width: 80%;
+  height: 500px;
+  border-bottom: 15px solid rgba(22, 144, 22);
+  margin: 30px auto;
+  background: linear-gradient(#87ceeb, #e0f6ff);
+  position: relative;
+  overflow: hidden;
+}
+
+button {
+  width: 80%;
+  padding: 10px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.restart {
+  width: 40%;
+  padding: 10px 0;
+  cursor: pointer;
+  border: none;
+  background-color: forestgreen;
+  font-size: 25px;
+  border-radius: 10px;
+  color: white;
+  transition: 800ms;
+}
+
+.clouds {
+  position: absolute;
+  width: 150px;
+  top: 100px;
+  animation: clouds 10s infinite linear;
+  /*nome da animação - duraçao - tempo animação */
+}
+
+.mario {
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  
+}
+
+.jump{
+    animation: mario 500ms  ease-out;
+    /*nome da animação - duraçao - tempo animação */
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe 1300ms infinite linear;
+  /*nome da animação - duraçao - tempo animação */
+}
+
+/*animações*/
+
+@keyframes clouds {
+  /*dar sensação de movimento da direta para esquerda */
+  from {
+    right: -150px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes pipe {
+  /*dar sensação de movimento da direta para esquerda */
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes mario {
+  /*criando movimento do mario -  do 40% ao 60% criamos efeito do pulo  */
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 120px;
+  }
+  50% {
+    bottom: 120px;
+  }
+
+  60% {
+    bottom: 120px;
+  }
+  100% {
+    bottom: 0;
+  }
+}

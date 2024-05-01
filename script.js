@@ -54,7 +54,7 @@ const loop = setInterval(() => {
     mario.style.bottom = `${marioPosition}px`; //Define a posição vertical do Mario com base na posição atual do Mario (marioPosition)
 
     mario.src = "./assets/game-over.png"; //Altera a imagem do Mario para a imagem de "Game Over".
-    mario.style.width = "200px"; //define  alargura do Mario como 200 pixels
+    mario.style.width = "160px"; //define  alargura do Mario como 200 pixels
     mario.style.marginLeft = "23px"; //define a  margem esquerda como 23 pixels
 
     clearInterval(loop); //Interrompe a execução do loop, impedindo que ele continue verificando a colisão entre o Mario e o tubo.

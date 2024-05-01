@@ -1,17 +1,40 @@
+/*estilos globais  */
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0; /* preenchimento interno do elemento */
+  margin: 0; /* retira as margens externas */
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden; /* retira a rolagem da barra no navegador */
+}
+
+.container {
+  position: relative; /*Define a posição do contêiner como relativa ao próprio local original.*/
+  display: flex; /* permite o uso de propriedades de layout flexiveis  */
+  justify-content: center; /* centraliza na horizontal  */
+  align-items: center; /* centraliza na vertical  */
+  height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+}
+
 .board {
-  width: 80%;
-  height: 500px;
-  border-bottom: 15px solid rgba(22, 144, 22);
-  margin: 30px auto;
-  background: linear-gradient(#87ceeb, #e0f6ff);
-  position: relative;
-  overflow: hidden;
+  width: 100vw; /* Ocupa toda a largura da tela */
+  height: 100vh; /* Ocupa toda a altura da tela */
+  border-bottom: 15px solid rgba(22, 144, 22); /*aciona borda solida de 15px e cor definida */
+  margin: 30px auto; /*margem superior e inforerior de 30px e automatica nas laterais  */
+  background: linear-gradient(
+    #87ceeb,
+    #e0f6ff
+  ); /* plano de fundo com gradiente */
+  position: relative; /* */
+  overflow: hidden; /*Define a posição do elemento relativa ao seu próprio local original. */
+}
+
+.button {
+  position: absolute;
+  top: 20px; /* distancia o elemento ao topo*/
+  z-index: 1; /* Garante que o botão fique sobre os outros elementos */
+  width: 350px; /* define  a largura  */
 }
 
 button {
@@ -19,57 +42,66 @@ button {
   padding: 10px 0;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: center; /*centraliza na horizontal */
 }
 
 .restart {
-  width: 40%;
-  padding: 10px 0;
-  cursor: pointer;
-  border: none;
-  background-color: forestgreen;
-  font-size: 25px;
-  border-radius: 10px;
-  color: white;
-  transition: 800ms;
+  padding: 10px 20px;
+  cursor: pointer; /* cursor de mão  */
+  border: none; /* retira a borda*/
+  background-color: forestgreen; /* cor de fundo */
+  font-size: 25px; /* tamanho da letra */
+  border-radius: 10px; /* bordas redondas */
+  color: white; /* cor da letra */
+  transition: 800ms; /* adiciona efeito de transição  */
 }
 
 .clouds {
   position: absolute;
-  width: 150px;
-  top: 100px;
+  width: 230px; /* largura */
+  top: 250px; /* distancia o elemento ao topo*/
   animation: clouds 10s infinite linear;
   /*nome da animação - duraçao - tempo animação */
 }
 
 .mario {
   position: absolute;
-  bottom: 0;
-  width: 120px;
-  
+  bottom: 0; /*distancia entre a parte inferior e o elemento */
+  width: 200px;
 }
 
-.jump{
-    animation: mario 500ms  ease-out;
-    /*nome da animação - duraçao - tempo animação */
+.jump {
+  animation: mario 500ms ease-out;
+  /*nome da animação - duraçao - tempo animação */
 }
 
 .pipe {
   position: absolute;
   bottom: 0;
-  width: 80px;
+  width: 110px;
   animation: pipe 1300ms infinite linear;
   /*nome da animação - duraçao - tempo animação */
 }
 
-/*animações*/
+.game-over-text {
+  position: absolute;
+  top: 50%; /*define a distancia entre o elemento e o topo como 50% */
+  left: 50%; /*define a distancia entre a esquerda e o elemento  como 50% */
+  transform: translate(-50%, -50%); /*Aplica uma transformação para mover o elemento 50% para a esquerda e 50% para cima */
+  font-size: 130px;
+  font-weight: bold;  /*aplica negrito */
+  color: forestgreen; /*cor da letra */
+  display: none; /* Inicialmente oculto */
+}
 
-@keyframes clouds {
+/*iniando as animações*/
+
+@keyframes clouds { /*definindo a animação das nuvens  */
   /*dar sensação de movimento da direta para esquerda */
   from {
-    right: -150px;
+    right: -150px; /* estado inicial da animação, as nuvens começam com uma posição de -150px da direita*/
   }
-  to {
+  to { /*estilo final da animação,  as nuvens se movem para a direita até ocupar 100% da largura da tela. */
     right: 100%;
   }
 }
@@ -86,20 +118,20 @@ button {
 
 @keyframes mario {
   /*criando movimento do mario -  do 40% ao 60% criamos efeito do pulo  */
-  0% {
+  0% { /* Indica o estado inicial da animação, onde o Mario está no chão.*/
     bottom: 0;
   }
-  40% {
+  40% { /*Indica um estágio intermediário onde o Mario está pulando para cima, atingindo uma posição de 120px acima do chão.  */ 
     bottom: 120px;
   }
-  50% {
+  50% { /* Mantém o Mario na mesma posição intermediária.*/
     bottom: 120px;
   }
 
-  60% {
+  60% { /*Mantém o Mario na mesma posição intermediária.*/
     bottom: 120px;
   }
-  100% {
+  100% { /*Indica o estado final da animação, onde o Mario retorna ao chão.*/ 
     bottom: 0;
   }
 }

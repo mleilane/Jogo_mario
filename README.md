@@ -22,3 +22,12 @@ Clique aqui para ver uma demonstração do <a href ="https://mleilane.github.io/
 - Código comentado para facilitar a compreensão do seu funcionamento para pessoas iniciantes em programação
 
 
+
+<h2 align="center"> Tecnologias utilizadas:  </h2> 
+
+<div style="display: inline_block"><br>
+  <img align="center" alt="Maria-html#" height="30" width="40" src="https://raw.githubusercontent.com/mleilane/skill-icons/af89bcc5e478013caaa514c31a3789f25e818193/icons/HTML.svg">
+  <img align="center" alt="Maria-javascript#" height="30" width="40" src="https://raw.githubusercontent.com/mleilane/skill-icons/af89bcc5e478013caaa514c31a3789f25e818193/icons/JavaScript.svg">
+  <img align="center" alt="Maria-css#" height="30" width="40" src="https://raw.githubusercontent.com/mleilane/skill-icons/af89bcc5e478013caaa514c31a3789f25e818193/icons/CSS.svg">
+ 
+</div>

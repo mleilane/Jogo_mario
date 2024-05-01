@@ -58,8 +58,8 @@ button {
 
 .clouds {
   position: absolute;
-  width: 180px; /* largura */
-  top: 100px; /* distancia o elemento ao topo*/
+  width: 150px; /* largura */
+  top: 58px; /* distancia o elemento ao topo*/
   animation: clouds 10s infinite linear;
   /*nome da animação - duraçao - tempo animação */
 }
@@ -88,7 +88,7 @@ button {
   top: 50%; /*define a distancia entre o elemento e o topo como 50% */
   left: 50%; /*define a distancia entre a esquerda e o elemento  como 50% */
   transform: translate(-50%, -50%); /*Aplica uma transformação para mover o elemento 50% para a esquerda e 50% para cima */
-  font-size: 130px;
+  font-size: 90px;
   font-weight: bold;  /*aplica negrito */
   color: forestgreen; /*cor da letra */
   display: none; /* Inicialmente oculto */

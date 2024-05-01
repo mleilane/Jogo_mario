@@ -19,6 +19,6 @@ Clique aqui para ver uma demonstração do <a href ="https://mleilane.github.io/
 - Detecta colisões entre o Mario e os tubos para determinar o fim do jogo.
 - Inclui botão de "RESTART" para permitir reiniciar o jogo após o fim da partida.
 - Adiciona texto "Game Over" quando o Mario colide com um tubo.
-- Código comentado para facilitar a compreensão do seu funcionamento para pessoas iniciantes em programção
+- Código comentado para facilitar a compreensão do seu funcionamento para pessoas iniciantes em programação
 
 

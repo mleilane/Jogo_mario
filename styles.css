@@ -59,7 +59,7 @@ button {
 .clouds {
   position: absolute;
   width: 150px; /* largura */
-  top: 250px; /* distancia o elemento ao topo*/
+  top: 200px; /* distancia o elemento ao topo*/
   animation: clouds 10s infinite linear;
   /*nome da animação - duraçao - tempo animação */
 }

@@ -67,7 +67,7 @@ button {
 .mario {
   position: absolute;
   bottom: 0; /*distancia entre a parte inferior e o elemento */
-  width: 200px;
+  width: 180px;
 }
 
 .jump {
@@ -78,7 +78,7 @@ button {
 .pipe {
   position: absolute;
   bottom: 0;
-  width: 110px;
+  width: 100px;
   animation: pipe 1300ms infinite linear;
   /*nome da animação - duraçao - tempo animação */
 }
